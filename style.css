@@ -12,7 +12,6 @@ body {
     background: #18bcfd;
 }
 
-
 .container {
     display: flex;
     flex-direction: column;
@@ -36,4 +35,8 @@ body {
 .rowStyle {
     display: flex;
     flex-grow: 1;
+}
+
+.rowStyle .hover {
+    background-color: #18bcfd;
 }
