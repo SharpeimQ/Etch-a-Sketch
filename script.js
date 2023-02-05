@@ -17,6 +17,7 @@ const createGrid = (vertical, horizontal) => {
             //Hover Effects
             box.addEventListener('mouseenter', () => {
                 box.classList.add('hover');
+                box.style.filter = "saturation(90%)";
             })
         }
     }
