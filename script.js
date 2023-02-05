@@ -18,9 +18,6 @@ const createGrid = (vertical, horizontal) => {
             box.addEventListener('mouseenter', () => {
                 box.classList.add('hover');
             })
-            box.addEventListener('mouseleave', () => {
-                box.classList.remove('hover');
-            })
         }
     }
 }
