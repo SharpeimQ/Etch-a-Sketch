@@ -31,7 +31,8 @@ body {
 
 .menu {
     display: flex;
-    gap: 40px;
+    gap: 56.5px;
+    align-items: center;
 }
 
 /* JS */
@@ -63,7 +64,7 @@ button:active {
     transform: scale(0.95);
 }
 
-.btn-dimensions:hover {
+button:hover {
     filter: brightness(106%);
 }
 

@@ -1,15 +1,16 @@
 const container = document.querySelector('.container');
 const button = document.querySelector('.btn-dimensions');
 const rainbow = document.querySelector('.rainbow');
-const clear = document.querySelector('.clear');
 const eraser = document.querySelector('.eraser');
 const standard = document.querySelector('.default');
+const clear = document.querySelector('.clear');
 
 let vertical = 16;
 let horizontal = 16;
 
-//Container creation 
+
 const createGrid = (vertical, horizontal) => {
+    //Container creation 
     for (let i = 0; i < vertical; i++) {
         let row = document.createElement('div');
         row.classList.add('rowStyle');
@@ -18,21 +19,37 @@ const createGrid = (vertical, horizontal) => {
             let box = document.createElement('div');
             box.classList.add('boxStyle');
             row.appendChild(box);
-
             box.addEventListener('mouseenter', () => {
             box.classList.add('hover');
             });
 
-            eraser.addEventListener('click', () => {
-                box.addEventListener('mouseenter', () => {
-                box.classList.remove('hover');
-            });
-        });
+                //Eraser
+                eraser.addEventListener('click', () => {
+                    box.addEventListener('mouseenter', () => {
+                    box.classList.remove('hover');
+                });
+                });
+                
+                //Default Color
+                standard.addEventListener('click', () => {
+                    box.addEventListener('mouseenter', () => {
+                    box.classList.add('hover');
+                });
+                });              
+
+                //Rainbow
+
         }
     }
 }
 
 createGrid(vertical, horizontal);
+
+//Clear Board
+clear.addEventListener('click', () => {
+    container.replaceChildren();
+    createGrid(vertical, horizontal);
+});
 
 //Change Dimensions
 button.addEventListener('click', () => {
