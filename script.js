@@ -25,14 +25,14 @@ const createGrid = (vertical, horizontal) => {
                 //Eraser
                 eraser.addEventListener('click', () => {
                     box.addEventListener('mouseenter', () => {
-                    box.classList.remove('hover');
+                    box.style.backgroundColor = 'white';
                 });
                 });
                 
                 //Default Color
                 standard.addEventListener('click', () => {
                     box.addEventListener('mouseenter', () => {
-                    box.classList.add('hover');
+                    box.style.backgroundColor = '#18bcfd';
                 });
                 });              
 
