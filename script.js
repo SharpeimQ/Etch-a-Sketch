@@ -4,6 +4,7 @@ const rainbow = document.querySelector('.rainbow');
 const eraser = document.querySelector('.eraser');
 const standard = document.querySelector('.default');
 const clear = document.querySelector('.clear');
+const slider = document.querySelector('.slider');
 
 let vertical = 16;
 let horizontal = 16;
