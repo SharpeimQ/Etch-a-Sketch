@@ -29,6 +29,11 @@ body {
     color: white;
 }
 
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
 /* JS */
 .boxStyle {
     background: white;
@@ -41,10 +46,10 @@ body {
 }
 
 .rowStyle .hover {
-    background-color: #18bcfd;
+    background: #18bcfd;
 }
 
-.btn-dimensions {
+button {
     cursor: pointer;
     border-style: none;
     padding: 20px;
@@ -54,7 +59,7 @@ body {
     background: #1288b7;
 }
 
-.btn-dimensions:active {
+button:active {
     transform: scale(0.95);
 }
 

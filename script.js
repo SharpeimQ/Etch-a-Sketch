@@ -1,5 +1,10 @@
 const container = document.querySelector('.container');
 const button = document.querySelector('.btn-dimensions');
+const rainbow = document.querySelector('.rainbow');
+const clear = document.querySelector('.clear');
+const eraser = document.querySelector('.eraser');
+const standard = document.querySelector('.default');
+
 let vertical = 16;
 let horizontal = 16;
 
@@ -14,17 +19,22 @@ const createGrid = (vertical, horizontal) => {
             box.classList.add('boxStyle');
             row.appendChild(box);
 
-            //Hover Effects
             box.addEventListener('mouseenter', () => {
-                box.classList.add('hover');
-                box.style.filter = "saturation(90%)";
-            })
+            box.classList.add('hover');
+            });
+
+            eraser.addEventListener('click', () => {
+                box.addEventListener('mouseenter', () => {
+                box.classList.remove('hover');
+            });
+        });
         }
     }
 }
 
 createGrid(vertical, horizontal);
 
+//Change Dimensions
 button.addEventListener('click', () => {
     container.replaceChildren();
 
@@ -39,5 +49,4 @@ button.addEventListener('click', () => {
     } while ((horizontal <= 0) || (horizontal > 100));
     
     createGrid(vertical, horizontal);
-})
-
+});
