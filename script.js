@@ -8,7 +8,6 @@ const clear = document.querySelector('.clear');
 let vertical = 16;
 let horizontal = 16;
 
-
 const createGrid = (vertical, horizontal) => {
     //Container creation 
     for (let i = 0; i < vertical; i++) {
@@ -38,7 +37,13 @@ const createGrid = (vertical, horizontal) => {
                 });              
 
                 //Rainbow
-
+                rainbow.addEventListener('click', () => {
+                    box.addEventListener('mouseenter', () => {
+                        let randHex = Math.floor(Math.random() * 0xffffff).toString(16);
+                        randHex = `#${randHex.padStart(6,"0")}`;
+                        box.style.backgroundColor = randHex;
+                });
+                });  
         }
     }
 }
