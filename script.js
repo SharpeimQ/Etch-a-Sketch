@@ -36,6 +36,12 @@ const createGrid = (vertical, horizontal) => {
             box.classList.add('hover');
             });
 
+            box.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                box.classList.remove('hover')
+                }, 500);
+                });
+
                 //Eraser
                 eraser.addEventListener('click', () => {
                     box.addEventListener('mouseenter', () => {
