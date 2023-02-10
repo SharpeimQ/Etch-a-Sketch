@@ -20,12 +20,17 @@
         <button class="clear">Clear</button>
     </div>
     <div class="holder">
-        <div class="slide-container">
-            <input type="range" min="1" max="100" value="16" class="slider">
+        <div class="holderTwo">
+            <div class="slide-container">
+                <input type="range" min="1" max="100" value="16" class="slider H" id="myRangeH" oninput="changerH(this.value)">
+                <p>Height: <span id="demoHeight">16</span></p>
+            </div>
+            <div class="slide-container">
+                <input type="range" min="1" max="100" value="16" class="slider W" id="myRangeW" oninput="changerW(this.value)">
+                <p>Width: <span id="demoWidth">16</span></p>
+            </div>
         </div>
-        <div class="slide-container">
-            <input type="range" min="1" max="100" value="16" class="slider">
-        </div>
+        <button class="btn-dimensions">Create</button>
     </div>
 </body>
 </html>

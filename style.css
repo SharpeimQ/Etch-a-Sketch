@@ -16,6 +16,13 @@ body {
     background: #18bcfd;
 }
 
+p {
+    color: white;
+    padding: 3px 0;
+    font-size: large;
+    font-weight: 700;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -31,15 +38,23 @@ body {
 
 .menu {
     display: flex;
-    gap: 54px;
+    gap: 53px;
     align-items: center;
 }
 
 .holder {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     width: 760px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.holderTwo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    align-items: center;
+    width: 590px;
 }
 
 .slide-container {
@@ -49,13 +64,10 @@ body {
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 760px;
+    width: 560px;
     height: 25px;
-    background: #1883fd;
+    background: white;
     outline: none;
-    opacity: 0.8;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
 }
 
 .slider:hover {
@@ -66,7 +78,7 @@ body {
     -webkit-appearance: none;
     width: 30px;
     height: 30px;
-    background-color: white;
+    background-color: #18bcfd;
     cursor: pointer;
 }
 
@@ -90,8 +102,12 @@ button {
     padding: 20px;
     font-size: 20px;
     font-weight: 900;
-    color: white;
-    background: #1883fd;
+    color: #18bcfd;
+    background: white;
+}
+
+.btn-dimensions {
+    height: 100px;
 }
 
 button:active {

@@ -4,10 +4,23 @@ const rainbow = document.querySelector('.rainbow');
 const eraser = document.querySelector('.eraser');
 const standard = document.querySelector('.default');
 const clear = document.querySelector('.clear');
-const slider = document.querySelector('.slider');
+const sliderH = document.getElementById('myRangeH');
+const sliderW = document.getElementById('myRangeW');
+//const heights = document.getElementById('demoHeight');
 
 let vertical = 16;
 let horizontal = 16;
+
+//Slider 
+function changerH(val) {
+    document.getElementById('demoHeight').innerHTML = val;
+    vertical = val;
+}
+
+function changerW(val) {
+    document.getElementById('demoWidth').innerHTML = val;
+    horizontal = val;
+}
 
 const createGrid = (vertical, horizontal) => {
     //Container creation 
@@ -60,16 +73,5 @@ clear.addEventListener('click', () => {
 //Change Dimensions
 button.addEventListener('click', () => {
     container.replaceChildren();
-
-    do {
-    let temp = prompt('Enter the height for the Sketchpad', 16);
-    vertical = +temp;
-    } while ((vertical <= 0) || (vertical > 100));
-
-    do {
-    let temp2 = prompt('Enter the width for the Sketchpad', 16);
-    horizontal = +temp2;
-    } while ((horizontal <= 0) || (horizontal > 100));
-    
     createGrid(vertical, horizontal);
 });
